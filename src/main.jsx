@@ -6,16 +6,23 @@ import {RouterProvider, createBrowserRouter} from "react-router-dom";
 import Downloader from './components/Downloader.jsx';
 import {store} from "./store/createStore.js";
 import {Provider} from "react-redux"
+import Layout from './Components/Layout.jsx';
 
 const router = createBrowserRouter([
   {
   path: '/', 
-  element: <App />,
+  element: <Layout />,
+  children: [
+    {
+      path: '/',
+      element: <App />
+    },
+    {
+      path: "/download",
+      element: <Downloader />
+    }
+  ]
   },
-  {
-    path: "/download",
-    element: <Downloader />
-  }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -1,8 +1,6 @@
-import React from 'react'
-
-const Shimmer = () => {
-  return (
-    <>
+const LoadingSkeleton = () => {
+return (
+    <div>
     <div className='flex justify-center border-gray-600'>
         <div className="w-[450px] h-[750px] bg-gray-200 rounded-lg"></div>
     </div>
@@ -18,8 +16,7 @@ const Shimmer = () => {
         
         
     </div>
-    </>
-  )
-}
+    </div>
+)}
 
-export default Shimmer
+export default LoadingSkeleton

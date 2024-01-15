@@ -3,7 +3,7 @@ import {useSelector} from "react-redux";
 import { useDispatch } from 'react-redux';
 import { getPostData } from '../utils/getPostData';
 import { setUrl } from '../store/urlSlice';
-import Shimmer from "./Shimmer";
+import LoadingSkeleton from '../Loader/LoadingSkeleton';
 
 const Downloader = () => {
 
@@ -57,7 +57,7 @@ const Downloader = () => {
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 rounded-lg p-4 md:p-8 bg-white h-max-[80%]'>
         {
           loading ? 
-          <Shimmer /> :
+          <LoadingSkeleton /> :
           <>
           <div className='flex justify-center'>
             <img className='w-[450px] rounded-lg' src={data[0]?.thumb} alt="" />
